@@ -1,6 +1,10 @@
 console.log('Smooth Scroll');
 
-let scrollSpeed = 16
+const scrollSpeed = 16
+const scrollSpeedFast = 32
+
+
+let fastScroll = false
 
 let scrollActivated = false
 
@@ -11,13 +15,12 @@ let scrollDown = false
 function scroll() {
   if (scrollDown || scrollUp) {
     window.scrollBy({
-      top: scrollSpeed * (scrollDown - scrollUp)
+      top: (fastScroll ? scrollSpeedFast : scrollSpeed) * (scrollDown - scrollUp)
     })
     window.requestAnimationFrame(scroll)
   } else {
     scrollActivated = false
   }
-  console.log(new Date().getTime())
 }
 
 
@@ -30,6 +33,8 @@ window.addEventListener('keydown', evt => {
     scrollUp = true
     if (!scrollActivated) scroll()
     scrollActivated = true
+  } else if (evt.key === 'Control') {
+    fastScroll = true
   }
 })
 
@@ -38,6 +43,8 @@ window.addEventListener('keyup', evt => {
     scrollDown = false 
   } else if (evt.code === 'ArrowUp') {
     scrollUp = false
+  } else if (evt.key === 'Control') {
+    fastScroll = false
   }
 })
 

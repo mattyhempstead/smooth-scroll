@@ -1,7 +1,7 @@
 {
     "name": "Smooth Scroll",
     "description": "A Chrome extension to allow for quick and easy keyboard scrolling",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "manifest_version": 2,
     "content_scripts": [
         {
