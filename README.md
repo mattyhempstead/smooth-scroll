@@ -1,7 +1,11 @@
 # smooth-scroll
 
-A Chrome extension to allow for quick and easy keyboard scrolling  
+A Chrome extension which adds shortcuts to smoothly scroll with the keyboard.
 
-Hold `Shift+ArrowUp` to scroll up  
-Hold `Shift+ArrowDown` to scroll down  
+## Shortcuts
+
+Hold `Shift + ArrowUp` to scroll up  
+Hold `Shift + ArrowDown` to scroll down  
+
+Holding `Ctrl` with either of the above shortcuts will enable fast scroll. 
 
