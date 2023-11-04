@@ -2,7 +2,7 @@
     "name": "Smooth Scroll",
     "description": "Adds shortcuts to smoothly scroll with the keyboard.",
     "version": "0.2.0",
-    "manifest_version": 2,
+    "manifest_version": 3,
     "icons": {
         "32": "icons/icon32.png",
         "48": "icons/icon48.png",
